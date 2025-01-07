@@ -5,20 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tata Zeu - STRONGER THAN ALL</title>
   <style>
-    /* Desktop version */
+    /* Ensure full height for the page */
+    html, body {
+      height: 100%;  /* Make sure the page uses the full height of the browser */
+      margin: 0;  /* Remove default margin */
+    }
+
+    /* Flexbox to push footer to the bottom */
     body {
-     background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/moneda (3).png');
-     background-size: cover;
-     background-position: center center;
-     background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;  /* Pushes footer to the bottom */
+      background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/moneda%20(3).png');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
     }
     
     header {
       background: rgba(0, 0, 0, 0); /* Transparent black background for header */
       color: #000000;
       padding: 20px 0;
+      text-align: center;
     }
-    
+
     header h1 {
       margin: 0;
       font-size: 2.5rem;
@@ -47,16 +57,16 @@
     }
 
     footer {
-      background: rgba(0, 0, 0, 0); /* Transparent black background for header */
+      background: rgba(0, 0, 0, 0); /* Transparent black background for footer */
       color: #000000;
       padding: 10px 0;
       font-size: 14px;
+      text-align: center;
     }
 
     /* Mobile version */
     @media (max-width: 768px) {
       body {
-        background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/moneda (3).png');
         background-size: contain; /* Use contain for smaller background */
         background-position: center center;
         background-repeat: no-repeat;

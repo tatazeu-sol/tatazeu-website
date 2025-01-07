@@ -7,15 +7,10 @@
   <style>
     /* Desktop version */
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/moneda.png'); /* Desktop background */
-      background-size: cover; /* Ensures image covers the full screen */
-      background-position: center center; /* Centers the image */
-      background-attachment: fixed; /* Keeps the image fixed while scrolling */
-      background-color: #f4f4f4; /* Fallback color if image fails to load */
+     background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/moneda.png');
+     background-size: cover;
+     background-position: center center;
+     background-attachment: fixed;
     }
     
     header {
@@ -61,7 +56,10 @@
     /* Mobile version */
     @media (max-width: 768px) {
       body {
-        background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/moneda.png'); /* Mobile background */
+        background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/moneda.png');
+        background-size: contain; /* Use contain for smaller background */
+        background-position: center center;
+        background-repeat: no-repeat;
       }
 
       header h1 {

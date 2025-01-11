@@ -50,8 +50,13 @@
     }
 
     .left-content, .right-content {
-      width: 120%;
+      width: 40%;
       text-align: center;
+    }
+
+    .left-content p, .right-content p {
+      margin: 10px 0;
+      font-size: 1.5rem; /* Desktop font size */
     }
 
     footer {
@@ -80,9 +85,11 @@
     footer .social-buttons .twitter {
       background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/X%20button.webp');
     }
+
     footer .social-buttons .pumpfun {
       background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/pumpfund%20button.webp');
     }
+
     footer .social-buttons .telegram {
       background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/telegram%20button%20f.webp');
     }
@@ -110,25 +117,19 @@
       }
 
       section {
-        flex-direction: column; /* Stack the content on top of each other */
+        flex-direction: column;
         align-items: center;
-        top: 20%; /* Adjust for mobile view */
-        margin-top: -75px; /* Adjust this value to move the section down or up */
-        /* Use a negative value for margin-top to move it up */
+        height: auto;
+        padding: 20px;
       }
 
       .left-content, .right-content {
-        width: 80%; /* Reduce the size for mobile */
+        width: 90%; /* Full width for mobile */
         margin: 10px 0;
       }
-      /* Adjust spacing between the two sections */
-      .left-content {
-        margin-bottom: 210px; /* Adds space between the two sections */
-      }
 
-      /* Adjust positioning for mobile */
-      .left-content, .right-content {
-        width: 90%; /* Ensure sections fit the screen width */
+      .left-content p, .right-content p {
+        font-size: 1.2rem; /* Smaller font size for mobile */
       }
 
       footer .social-buttons a {

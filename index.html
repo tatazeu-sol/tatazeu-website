@@ -26,34 +26,32 @@
 
     header {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; /* Align logo on the left, button on the right */
       align-items: center;
       padding: 20px;
       background: none;
       color: #000;
     }
 
-    /* Logo container for positioning */
     header .logo-container {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      position: relative; /* Enables movement */
-      top: 0; /* Adjust to move up or down */
-      left: 0; /* Adjust to move left or right */
+      position: relative; /* Allows movement */
     }
 
     header .logo-container img {
       max-height: 100px;
+      position: relative; /* Allows movement */
     }
 
     header p {
       margin: 0;
       font-style: italic;
       font-size: 1.2rem;
+      position: relative; /* Allows movement */
     }
 
-    /* Button style with adjustable position */
     .buy-btn {
       width: 120px;
       height: 40px;
@@ -65,24 +63,45 @@
       text-align: center;
       text-decoration: none;
       border-radius: 5px;
-      position: relative; /* Enables movement */
-      top: 5; /* Adjust to move up or down */
-      right: 5; /* Adjust to move left or right */
+      position: relative; /* Allows movement */
     }
 
-    /* Updated section with left and right content */
+    .buy-btn:hover {
+      background-color: none; /* Change color on hover if needed */
+    }
+
+    .buy-btn:focus {
+      outline: none;
+    }
+
     section {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: center; /* Centers horizontally */
+      align-items: center; /* Centers vertically */
       position: relative;
-      padding-top: 50px;
       width: 100%;
-      height: 100vh;
+      height: 100vh; /* Full viewport height */
+      padding: 20px;
+    }
+
+    .left-content, .right-content {
+      background: none;
+      border-radius: 8px;
+      width: 40%; /* Equal width for both sections */
+      padding: 20px;
+      text-align: center;
+    }
+
+    .left-content {
+      margin-right: 5%; /* Space between the two sections */
+    }
+
+    .right-content {
+      margin-left: 5%;
     }
 
     footer {
-      background: rgba(0, 0, 0, 0);
+      background: none;
       color: #000;
       padding: 20px 0;
       font-size: 14px;
@@ -108,56 +127,82 @@
     footer .social-buttons .twitter {
       background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/X%20button.webp');
     }
+
     footer .social-buttons .pumpfun {
       background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/pumpfund%20button.webp');
     }
+
     footer .social-buttons .telegram {
       background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/telegram%20button%20f.webp');
     }
 
+    /* Movement classes for logo, text, and button */
+    .moveable {
+      position: relative; /* Allows moving with top, left, right, and bottom */
+    }
+
+    .moveable-logo {
+      top: 10px; /* Adjust vertical position */
+      left: 20px; /* Adjust horizontal position */
+    }
+
+    .moveable-text {
+      top: 15px; /* Adjust vertical position */
+      left: 25px; /* Adjust horizontal position */
+    }
+
+    .moveable-buy {
+      top: -5px; /* Adjust vertical position */
+      right: 20px; /* Adjust horizontal position */
+    }
+
     /* Mobile version */
     @media (max-width: 768px) {
-      body {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
+      header {
+        flex-direction: row;
+        justify-content: space-between;
       }
 
       header .logo-container img {
         max-height: 80px;
       }
 
-      footer .social-buttons a {
-        width: 40px;
-        height: 40px;
-      }
-
-      header p {
-        font-size: 0.8rem;
-      }
-
       section {
         flex-direction: column;
         align-items: center;
-        top: 20%;
-        margin-top: -350px;
       }
 
       .left-content, .right-content {
-        width: 80%;
+        width: 90%;
         margin: 10px 0;
+      }
+
+      .buy-btn {
+        width: 100px;
+        height: 35px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo-container" style="top: 20px; left: 30px;">
+    <div class="logo-container moveable moveable-logo">
       <img src="https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/logo%20website%20(1).webp" alt="Tata Zeu Logo">
-      <p style="top: 10px; left: 10px;"><em>STRONGER THAN ALL</em></p>
+      <p class="moveable moveable-text"><em>STRONGER THAN ALL</em></p>
     </div>
-    <a href="https://pump.fun/coin/5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump" class="buy-btn" style="top: -10px; right: -20px;" target="_blank"></a>
+    <a href="https://pump.fun/coin/5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump" class="buy-btn moveable moveable-buy" target="_blank"></a>
   </header>
+  <section>
+    <div class="left-content">
+      <p>$ZEU</p>
+      <p>A memecoin with a scree</p>
+    </div>
+    <div class="right-content">
+      <p>work</p>
+      <p>work</p>
+      <p>work</p>
+    </div>
+  </section>
   <footer>
     <div class="social-buttons">
       <a href="https://t.me/+hq2lQl8dua8zM" class="telegram" target="_blank" aria-label="Telegram"></a>

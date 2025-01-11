@@ -26,26 +26,25 @@
 
     header {
       display: flex;
-      justify-content: space-between; /* Position logo and text on the left and button on the right */
+      justify-content: space-between;
       align-items: center;
-      padding: 20px 20px;
+      padding: 20px;
       background: none;
       color: #000;
     }
 
+    /* Logo container for positioning */
     header .logo-container {
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* Align logo and text to the left */
+      align-items: flex-start;
+      position: relative; /* Enables movement */
+      top: 0; /* Adjust to move up or down */
+      left: 0; /* Adjust to move left or right */
     }
 
     header .logo-container img {
-      max-height: 100px; /* Adjust the logo size as needed */
-    }
-
-    header h1 {
-      margin: 5px 0;
-      font-size: 2.5rem;
+      max-height: 100px;
     }
 
     header p {
@@ -54,11 +53,11 @@
       font-size: 1.2rem;
     }
 
-    /* Button style with background image */
+    /* Button style with adjustable position */
     .buy-btn {
       width: 120px;
       height: 40px;
-      background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/buy button now.webp');
+      background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/buy%20button%20now.webp');
       background-size: cover;
       background-repeat: no-repeat;
       border: none;
@@ -66,60 +65,20 @@
       text-align: center;
       text-decoration: none;
       border-radius: 5px;
-    }
-
-    .buy-btn:hover {
-      background-color: none; /* Change color on hover if needed */
-    }
-
-    .buy-btn:focus {
-      outline: none;
+      position: relative; /* Enables movement */
+      top: 0; /* Adjust to move up or down */
+      right: 0; /* Adjust to move left or right */
     }
 
     /* Updated section with left and right content */
     section {
       display: flex;
-      justify-content: center;  /* Centers horizontally */
-      align-items: center;      /* Centers vertically */
+      justify-content: center;
+      align-items: center;
       position: relative;
-      padding-top: 50px;        /* Move the sections down */
-      padding-left: -50px;        /* Move the sections to the right */
+      padding-top: 50px;
       width: 100%;
-      height: 100vh;            /* Full viewport height */
-    }
-
-    .left-content, .right-content {
-      background: none;
-      border-radius: 8px;
-      width: 40%; /* Equal width for both sections */
-      padding: 20px;
-      text-align: center;
-      box-shadow: none;
-    }
-
-    .left-content {
-      margin-right: 5%; /* Space between the two sections */
-    }
-
-    .right-content {
-      margin-left: 5%;
-    }
-
-    .left-content p, .right-content p {
-      margin: 5px 0;
-    }
-
-    section h2 {
-      color: #333;
-    }
-
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      height: 100vh;
     }
 
     footer {
@@ -152,7 +111,6 @@
     footer .social-buttons .pumpfun {
       background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/pumpfund%20button.webp');
     }
-
     footer .social-buttons .telegram {
       background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/telegram%20button%20f.webp');
     }
@@ -162,11 +120,7 @@
       body {
         background-size: contain;
         background-repeat: no-repeat;
-        background-attachment: scroll; /* Adjusts the background scroll behavior */
-      }
-
-      header h1 {
-        font-size: 2rem;
+        background-attachment: scroll;
       }
 
       header .logo-container img {
@@ -178,70 +132,32 @@
         height: 40px;
       }
 
-      /* Make STRONGER THAN ALL text smaller on mobile */
       header p {
-        font-size: 0.8rem; /* Adjust this value as needed */
+        font-size: 0.8rem;
       }
 
       section {
-        flex-direction: column; /* Stack the content on top of each other */
-        align-items: center;
-        top: 20%; /* Adjust for mobile view */
-        margin-top: -350px; /* Adjust this value to move the section down or up */
-        /* Use a negative value for margin-top to move it up */
-      }
-
-      .left-content, .right-content {
-        width: 80%; /* Reduce the size for mobile */
-        margin: 10px 0;
-      }
-      /* Adjust spacing between the two sections */
-      .left-content {
-        margin-bottom: 240px; /* Adds space between the two sections */
-      }
-
-      /* Adjust positioning for mobile */
-      .left-content, .right-content {
-        width: 90%; /* Ensure sections fit the screen width */
-      }
-
-      header {
-        flex-direction: row; /* Keep the layout horizontal on mobile */
-        text-align: left;
-        justify-content: space-between;
-      }
-
-      header .logo-container {
-        display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        top: 20%;
+        margin-top: -350px;
       }
 
-      .buy-btn {
-        margin-top: 0; /* No extra space between logo and button on mobile */
+      .left-content, .right-content {
+        width: 80%;
+        margin: 10px 0;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo-container">
+    <div class="logo-container" style="top: 20px; left: 30px;">
       <img src="https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/logo%20website%20(1).webp" alt="Tata Zeu Logo">
-      <p><em>STRONGER THAN ALL</em></p>
+      <p style="top: 10px; left: 10px;"><em>STRONGER THAN ALL</em></p>
     </div>
-    <a href="https://pump.fun/coin/5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump" class="buy-btn" target="_blank"></a>
+    <a href="https://pump.fun/coin/5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump" class="buy-btn" style="top: -10px; right: -20px;" target="_blank"></a>
   </header>
-  <section>
-    <div class="left-content">
-      <p>$ZEU</p>
-      <p>A memecoin with a scree</p>
-    </div>
-    <div class="right-content">
-      <p>work</p>
-      <p>work</p>
-      <p>work</p>
-    </div>
-  </section>
   <footer>
     <div class="social-buttons">
       <a href="https://t.me/+hq2lQl8dua8zM" class="telegram" target="_blank" aria-label="Telegram"></a>

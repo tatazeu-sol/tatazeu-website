@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tata Zeu: STRONGER THAN ALL. Bold and fearless memecoin community. Join us on Twitter and Telegram.">
-  <title>STRONGER THAN ALL</title>
+  <meta name="description" content="Tata Zeu: Bold and fearless memecoin community. Join us on Twitter and Telegram.">
+  <title>Tata Zeu</title>
   <link rel="icon" href="path-to-your-favicon.ico" type="image/x-icon">
   <style>
     /* Ensure full height for the page */
@@ -21,12 +21,14 @@
       background: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/Timeline%201%20(3).gif') center center fixed;
       background-repeat: no-repeat;
       background-size: 50%;
-      background-attachment: fixed; /* Ensures the background is fixed */
+      background-attachment: fixed;
     }
 
     header {
-      text-align: center;
-      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
       background: rgba(0, 0, 0, 0);
       color: #000;
     }
@@ -35,61 +37,26 @@
       max-height: 100px; /* Adjust the logo size as needed */
     }
 
-    header h1 {
-      margin: -20px 0 5px; /* Reduced margin to bring the text closer to the logo */
-      font-size: 2.5rem;
+    header .buy-button img {
+      max-height: 50px; /* Adjust the button size as needed */
     }
 
-    header p {
-      margin: 0;
-      font-style: italic;
-      font-size: 1.2rem;
-    }
-
-    /* Updated section with left and right content */
     section {
       display: flex;
-      justify-content: center;  /* Centers horizontally */
-      align-items: center;      /* Centers vertically */
+      justify-content: center;
+      align-items: center;
       position: relative;
-      padding-top: 50px;        /* Move the sections down */
-      padding-left: -50px;        /* Move the sections to the right */
+      padding-top: 50px;
       width: 100%;
-      height: 100vh;            /* Full viewport height */
+      height: 100vh;
     }
 
     .left-content, .right-content {
       background: none;
       border-radius: 8px;
-      width: 40%; /* Equal width for both sections */
+      width: 40%;
       padding: 20px;
       text-align: center;
-      box-shadow: none;
-    }
-
-    .left-content {
-      margin-right: 5%; /* Space between the two sections */
-    }
-
-    .right-content {
-      margin-left: 5%;
-    }
-
-    .left-content p, .right-content p {
-      margin: 5px 0;
-    }
-
-    section h2 {
-      color: #333;
-    }
-
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
 
     footer {
@@ -122,68 +89,19 @@
     footer .social-buttons .pumpfun {
       background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/pumpfund%20button.webp');
     }
-
     footer .social-buttons .telegram {
       background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/telegram%20button%20f.webp');
-    }
-
-    /* Mobile version */
-    @media (max-width: 768px) {
-      body {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-attachment: scroll; /* Adjusts the background scroll behavior */
-      }
-
-      header h1 {
-        font-size: 2rem;
-      }
-
-      header .logo-container img {
-        max-height: 80px;
-      }
-
-      footer .social-buttons a {
-        width: 40px;
-        height: 40px;
-      }
-
-      /* Make STRONGER THAN ALL text smaller on mobile */
-      header p {
-        font-size: 0.8rem; /* Adjust this value as needed */
-      }
-
-      section {
-        flex-direction: column; /* Stack the content on top of each other */
-        align-items: center;
-        top: 20%; /* Adjust for mobile view */
-        margin-top: -350px; /* Adjust this value to move the section down or up */
-        /* Use a negative value for margin-top to move it up */
-      }
-
-      .left-content, .right-content {
-        width: 80%; /* Reduce the size for mobile */
-        margin: 10px 0;
-      }
-      /* Adjust spacing between the two sections */
-      .left-content {
-        margin-bottom: 240px; /* Adds space between the two sections */
-      }
-
-      /* Adjust positioning for mobile */
-      .left-content, .right-content {
-        width: 90%; /* Ensure sections fit the screen width */
-      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-container">
-      <img src="https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/logo%20website%20(1).webp" alt="Tata Zeu Logo">
+      <img src="logo website (2).webp" alt="Tata Zeu Logo">
     </div>
-    <h1></h1>
-    <p><em>STRONGER THAN ALL</em></p>
+    <div class="buy-button">
+      <img src="buy button now.webp" alt="Buy Now">
+    </div>
   </header>
   <section>
     <div class="left-content">

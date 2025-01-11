@@ -26,7 +26,8 @@
 
     header {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column; /* Stack the logo and text */
+      justify-content: center;
       align-items: center;
       padding: 20px 20px;
       background: rgba(0, 0, 0, 0);
@@ -38,7 +39,7 @@
     }
 
     header h1 {
-      margin: -20px 0 5px; /* Reduced margin to bring the text closer to the logo */
+      margin: 5px 0;
       font-size: 2.5rem;
     }
 
@@ -205,10 +206,8 @@
     <div class="logo-container">
       <img src="https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/logo%20website%20(1).webp" alt="Tata Zeu Logo">
     </div>
-    <div>
-      <h1></h1>
-      <p><em>STRONGER THAN ALL</em></p>
-    </div>
+    <h1></h1>
+    <p><em>STRONGER THAN ALL</em></p>
     <a href="https://pump.fun/coin/5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump" class="buy-btn" target="_blank">BUY</a>
   </header>
   <section>

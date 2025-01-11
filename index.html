@@ -1,179 +1,208 @@
-<!DOCTYPE html>
+Code: <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stronger Than All</title>
+  <meta name="description" content="Tata Zeu: STRONGER THAN ALL. Bold and fearless memecoin community. Join us on Twitter and Telegram.">
+  <title>STRONGER THAN ALL</title>
+  <link rel="icon" href="path-to-your-favicon.ico" type="image/x-icon">
   <style>
-    /* General styles */
-    body {
+    /* Ensure full height for the page */
+    html, body {
+      height: 100%;
       margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
     }
 
-    /* Main container */
-    .main-container {
+    /* Flexbox to push footer to the bottom */
+    body {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      justify-content: space-between;
+      background: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/Timeline%201%20(3).gif') center center fixed;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-attachment: fixed; /* Ensures the background is fixed */
     }
 
-    /* Hero section */
-    .hero {
+    header {
       text-align: center;
-      margin-top: 50px;
+      padding: 20px 0;
+      background: rgba(0, 0, 0, 0);
+      color: #000;
     }
 
-    .hero img {
-      width: 150px;
+    header .logo-container img {
+      max-height: 100px; /* Adjust the logo size as needed */
     }
 
-    .hero h1 {
-      font-size: 24px;
-      margin: 10px 0;
+    header h1 {
+      margin: -20px 0 5px; /* Reduced margin to bring the text closer to the logo */
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 0;
       font-style: italic;
+      font-size: 1.2rem;
     }
 
-    /* Character image */
-    .character-img {
-      position: relative;
-      width: 120px;
-      height: 120px;
-      margin: 20px auto;
-    }
-
-    .character-img img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
-
-    /* Coin image */
-    .coin-img {
-      display: flex;
-      justify-content: center;
-      margin-top: 50px;
-    }
-
-    .coin-img img {
-      width: 200px;
-    }
-
-    /* Sections layout */
+    /* Updated section with left and right content */
     section {
       display: flex;
-      justify-content: flex-start; /* Aligns everything to the left */
-      align-items: center;
+      justify-content: center;  /* Centers horizontally */
+      align-items: center;      /* Centers vertically */
       position: relative;
-      width: 90%;
-      margin: 50px 0;
-      gap: 5%;
+      padding-top: 50px;        /* Move the sections down */
+      padding-left: -50px;        /* Move the sections to the right */
+      width: 100%;
+      height: 100vh;            /* Full viewport height */
     }
 
     .left-content, .right-content {
-      background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+      background: none;
       border-radius: 8px;
-      width: 40%; /* Equal width */
+      width: 40%; /* Equal width for both sections */
       padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: none;
     }
 
-    .left-content h2 {
-      margin: 0;
-      font-size: 1.5em;
+    .left-content {
+      margin-right: 5%; /* Space between the two sections */
+    }
+
+    .right-content {
+      margin-left: 5%;
+    }
+
+    .left-content p, .right-content p {
+      margin: 5px 0;
+    }
+
+    section h2 {
       color: #333;
     }
 
-    .left-content p {
-      margin: 10px 0 0;
-      color: #555;
+    a {
+      color: #007BFF;
+      text-decoration: none;
     }
 
-    .right-content ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+    a:hover {
+      text-decoration: underline;
     }
 
-    .right-content li {
-      margin: 5px 0;
-      color: #555;
-    }
-
-    /* Footer */
     footer {
-      text-align: center;
-      margin: 50px 0;
-    }
-
-    footer img {
-      width: 40px;
-      margin: 0 10px;
-    }
-
-    footer p {
+      background: rgba(0, 0, 0, 0);
+      color: #000;
+      padding: 20px 0;
       font-size: 14px;
-      margin: 10px 0 0;
+      text-align: center;
     }
 
-    /* Responsive adjustments */
+    footer .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+
+    footer .social-buttons a {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    footer .social-buttons .twitter {
+      background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/X%20button.webp');
+    }
+    footer .social-buttons .pumpfun {
+      background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/pumpfund%20button.webp');
+    }
+
+    footer .social-buttons .telegram {
+      background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/telegram%20button%20f.webp');
+    }
+
+    /* Mobile version */
     @media (max-width: 768px) {
+      body {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: scroll; /* Adjusts the background scroll behavior */
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header .logo-container img {
+        max-height: 80px;
+      }
+
+      footer .social-buttons a {
+        width: 40px;
+        height: 40px;
+      }
+
+      /* Make STRONGER THAN ALL text smaller on mobile */
+      header p {
+        font-size: 0.8rem; /* Adjust this value as needed */
+      }
+
       section {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: column; /* Stack the content on top of each other */
+        align-items: center;
+        top: 20%; /* Adjust for mobile view */
+        margin-top: -350px; /* Adjust this value to move the section down or up */
+        /* Use a negative value for margin-top to move it up */
       }
 
       .left-content, .right-content {
-        width: 100%;
+        width: 80%; /* Reduce the size for mobile */
+        margin: 10px 0;
+      }
+      /* Adjust spacing between the two sections */
+      .left-content {
+        margin-bottom: 240px; /* Adds space between the two sections */
+      }
+
+      /* Adjust positioning for mobile */
+      .left-content, .right-content {
+        width: 90%; /* Ensure sections fit the screen width */
       }
     }
   </style>
 </head>
 <body>
-  <div class="main-container">
-    <!-- Hero Section -->
-    <div class="hero">
-      <img src="logo.png" alt="Logo">
-      <h1>STRONGER THAN ALL</h1>
+  <header>
+    <div class="logo-container">
+      <img src="https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/logo%20website%20(1).webp" alt="Tata Zeu Logo">
     </div>
-
-    <!-- Character Image -->
-    <div class="character-img">
-      <img src="character.png" alt="Character">
+    <h1></h1>
+    <p><em>STRONGER THAN ALL</em></p>
+  </header>
+  <section>
+    <div class="left-content">
+      <p>$ZEU</p>
+      <p>A memecoin with a scree</p>
     </div>
-
-    <!-- Sections -->
-    <section>
-      <div class="left-content">
-        <h2>$ZEU</h2>
-        <p>A memecoin with a scree</p>
-      </div>
-      <div class="right-content">
-        <ul>
-          <li>work</li>
-          <li>work</li>
-          <li>work</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Coin Image -->
-    <div class="coin-img">
-      <img src="coin.png" alt="Coin">
+    <div class="right-content">
+      <p>work</p>
+      <p>work</p>
+      <p>work</p>
     </div>
-
-    <!-- Footer -->
-    <footer>
-      <a href="#"><img src="telegram-icon.png" alt="Telegram"></a>
-      <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-      <a href="#"><img src="heart-icon.png" alt="Heart"></a>
-      <p>© 2025 Tata Zeu. All Rights Reserved.</p>
-    </footer>
-  </div>
+  </section>
+  <footer>
+    <div class="social-buttons">
+      <a href="https://t.me/+hq2lQl8dua8zM" class="telegram" target="_blank" aria-label="Telegram"></a>
+      <a href="https://twitter.com/tatazeu_sol" class="twitter" target="_blank" aria-label="Twitter"></a>
+      <a href="https://pump.fun/coin/5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump" class="pumpfun" target="_blank" aria-label="Pumpfun"></a>
+    </div>
+    <p>&copy; 2025 Tata Zeu. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>

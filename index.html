@@ -21,6 +21,7 @@
       background: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/Timeline%201%20(3).gif') center center fixed;
       background-repeat: no-repeat;
       background-size: 50%;
+      background-attachment: fixed; /* Ensures the background is fixed */
     }
 
     header {
@@ -131,6 +132,7 @@
       body {
         background-size: contain;
         background-repeat: no-repeat;
+        background-attachment: scroll; /* Adjusts the background scroll behavior */
       }
 
       header h1 {
@@ -160,6 +162,11 @@
       .left-content, .right-content {
         width: 80%; /* Reduce the size for mobile */
         margin: 10px 0;
+      }
+
+      /* Adjust positioning for mobile */
+      .left-content, .right-content {
+        width: 90%; /* Ensure sections fit the screen width */
       }
     }
   </style>

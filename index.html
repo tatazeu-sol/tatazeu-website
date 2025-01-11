@@ -24,15 +24,43 @@
     }
     
     header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
       background: rgba(0, 0, 0, 0);
       color: #000;
-      padding: 20px 0;
-      text-align: center;
     }
 
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+    }
+
+    header .social-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    header .social-buttons a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    header .social-buttons .telegram {
+      background-image: url('path-to-telegram-button.svg');
+    }
+
+    header .social-buttons .twitter {
+      background-image: url('path-to-twitter-button.svg');
+    }
+
+    header .social-buttons .pumpfun {
+      background-image: url('path-to-pumpfun-button.svg');
     }
 
     section {
@@ -75,13 +103,25 @@
       header h1 {
         font-size: 2rem;
       }
+
+      header .social-buttons a {
+        width: 30px;
+        height: 30px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Tata Zeu</h1>
-    <p><em>STRONGER THAN ALL</em></p>
+    <div>
+      <h1>Tata Zeu</h1>
+      <p><em>STRONGER THAN ALL</em></p>
+    </div>
+    <div class="social-buttons">
+      <a href="https://t.me/+hq2lQl8dua8zM" class="telegram" target="_blank" aria-label="Telegram"></a>
+      <a href="https://twitter.com/tatazeu_sol" class="twitter" target="_blank" aria-label="Twitter"></a>
+      <a href="#" class="pumpfun" target="_blank" aria-label="Pumpfun"></a>
+    </div>
   </header>
   <section>
     <h2>About $ZEU</h2>

@@ -28,7 +28,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
+      padding: 20px 20px;
       background: rgba(0, 0, 0, 0);
       color: #000;
     }
@@ -48,43 +48,24 @@
       font-size: 1.2rem;
     }
 
-    /* Address display */
-    .address-container {
-      display: flex;
-      align-items: center;
-      font-family: monospace;
-      font-size: 1rem;
-      background: #f0f0f0;
-      border: 1px solid #ccc;
-      padding: 10px;
-      width: 300px;
-      text-align: center;
-      word-wrap: break-word;
-    }
-
-    .address {
-      margin-right: 10px;
-      padding-right: 5px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: 200px;
-    }
-
-    .copy-btn {
+    /* Button style */
+    .buy-btn {
       background: #007BFF;
       color: white;
+      padding: 10px 20px;
+      font-size: 1.2rem;
       border: none;
-      padding: 5px 10px;
-      font-size: 0.9rem;
       cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
     }
 
-    .copy-btn:hover {
+    .buy-btn:hover {
       background: #0056b3;
     }
 
-    .copy-btn:focus {
+    .buy-btn:focus {
       outline: none;
     }
 
@@ -224,10 +205,11 @@
     <div class="logo-container">
       <img src="https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/logo%20website%20(1).webp" alt="Tata Zeu Logo">
     </div>
-    <div class="address-container">
-      <div class="address">5HHG5...</div>
-      <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+    <div>
+      <h1></h1>
+      <p><em>STRONGER THAN ALL</em></p>
     </div>
+    <a href="https://pump.fun/coin/5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump" class="buy-btn" target="_blank">BUY</a>
   </header>
   <section>
     <div class="left-content">
@@ -248,19 +230,5 @@
     </div>
     <p>&copy; 2025 Tata Zeu. All Rights Reserved.</p>
   </footer>
-
-  <script>
-    const fullAddress = "5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump";
-
-    function copyToClipboard() {
-      const textArea = document.createElement("textarea");
-      textArea.value = fullAddress;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      alert("Address copied to clipboard!");
-    }
-  </script>
 </body>
 </html>

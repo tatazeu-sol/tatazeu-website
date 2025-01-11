@@ -26,8 +26,7 @@
 
     header {
       display: flex;
-      flex-direction: column; /* Stack the logo and text */
-      justify-content: center;
+      justify-content: space-between; /* Position logo and text on the left and button on the right */
       align-items: center;
       padding: 20px 20px;
       background: rgba(0, 0, 0, 0);
@@ -198,6 +197,15 @@
       .left-content, .right-content {
         width: 90%; /* Ensure sections fit the screen width */
       }
+
+      header {
+        flex-direction: column; /* Stack the logo and button vertically on mobile */
+        text-align: center;
+      }
+
+      .buy-btn {
+        margin-top: 10px; /* Adds space between the logo text and the button */
+      }
     }
   </style>
 </head>
@@ -206,8 +214,9 @@
     <div class="logo-container">
       <img src="https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/logo%20website%20(1).webp" alt="Tata Zeu Logo">
     </div>
-    <h1></h1>
-    <p><em>STRONGER THAN ALL</em></p>
+    <div>
+      <p><em>STRONGER THAN ALL</em></p>
+    </div>
     <a href="https://pump.fun/coin/5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump" class="buy-btn" target="_blank">BUY</a>
   </header>
   <section>

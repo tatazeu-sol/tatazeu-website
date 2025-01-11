@@ -25,8 +25,10 @@
     }
 
     header {
-      text-align: center;
-      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
       background: rgba(0, 0, 0, 0);
       color: #000;
     }
@@ -44,6 +46,22 @@
       margin: 0;
       font-style: italic;
       font-size: 1.2rem;
+    }
+
+    .address {
+      font-family: monospace;
+      font-size: 1rem;
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 300px;
+      cursor: pointer;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    .address:focus {
+      outline: none;
     }
 
     /* Updated section with left and right content */
@@ -182,8 +200,9 @@
     <div class="logo-container">
       <img src="https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/logo%20website%20(1).webp" alt="Tata Zeu Logo">
     </div>
-    <h1></h1>
-    <p><em>STRONGER THAN ALL</em></p>
+    <div class="address" id="address" onclick="copyToClipboard()">
+      CA: 5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump
+    </div>
   </header>
   <section>
     <div class="left-content">
@@ -204,5 +223,17 @@
     </div>
     <p>&copy; 2025 Tata Zeu. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    function copyToClipboard() {
+      var address = document.getElementById("address");
+      var range = document.createRange();
+      range.selectNode(address);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand('copy');
+      alert("Address copied to clipboard!");
+    }
+  </script>
 </body>
 </html>

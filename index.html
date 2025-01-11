@@ -110,14 +110,25 @@
       }
 
       section {
-        flex-direction: column;
-        padding: 20px;
-        height: auto; /* Adjust for mobile */
+        flex-direction: column; /* Stack the content on top of each other */
+        align-items: center;
+        top: 20%; /* Adjust for mobile view */
+        margin-top: -350px; /* Adjust this value to move the section down or up */
+        /* Use a negative value for margin-top to move it up */
       }
 
       .left-content, .right-content {
-        width: 90%; /* Full-width on smaller screens */
+        width: 80%; /* Reduce the size for mobile */
         margin: 10px 0;
+      }
+      /* Adjust spacing between the two sections */
+      .left-content {
+        margin-bottom: 240px; /* Adds space between the two sections */
+      }
+
+      /* Adjust positioning for mobile */
+      .left-content, .right-content {
+        width: 90%; /* Ensure sections fit the screen width */
       }
 
       footer .social-buttons a {

@@ -45,13 +45,32 @@
       font-size: 1.2rem;
     }
 
+    /* Updated section with left and right content */
     section {
+      display: flex;
+      justify-content: space-between;
       margin: 20px auto;
       padding: 20px;
-      max-width: 600px;
+      max-width: 1000px; /* Increase if you want more space */
       background: rgba(255, 255, 255, 0.9);
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-content {
+      flex: 1;
+      padding-right: 20px;
+      text-align: left;
+    }
+
+    .right-content {
+      flex: 1;
+      padding-left: 20px;
+      text-align: right;
+    }
+
+    .left-content p, .right-content p {
+      margin: 5px 0;
     }
 
     section h2 {
@@ -102,7 +121,6 @@
       background-image: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/telegram%20button%20f.webp');
     }
 
-
     /* Mobile version */
     @media (max-width: 768px) {
       body {
@@ -122,9 +140,21 @@
         width: 50px;
         height: 50px;
       }
+
       /* Make STRONGER THAN ALL text smaller on mobile */
-       header p {
-         font-size: 0.8rem; /* Adjust this value as needed */
+      header p {
+        font-size: 0.8rem; /* Adjust this value as needed */
+      }
+
+      section {
+        flex-direction: column; /* Stack the content on top of each other */
+        align-items: center;
+      }
+
+      .left-content, .right-content {
+        text-align: center;
+        margin-bottom: 20px;
+      }
     }
   </style>
 </head>
@@ -137,13 +167,15 @@
     <p><em>STRONGER THAN ALL</em></p>
   </header>
   <section>
-    <h2>About $ZEU</h2>
-    <p>Welcome to Tata Zeu, the bold and fearless memecoin that stands for strength, courage, and community.</p>
-    <p>Follow us on social media and join the movement:</p>
-    <p>
-      <a href="https://twitter.com/tatazeu_sol" target="_blank">Twitter</a> |
-      <a href="https://t.me/+hq2lQl8dua8zM" target="_blank">Telegram</a>
-    </p>
+    <div class="left-content">
+      <p>$ZEU</p>
+      <p>A memecoin with a scree</p>
+    </div>
+    <div class="right-content">
+      <p>work</p>
+      <p>work</p>
+      <p>work</p>
+    </div>
   </section>
   <footer>
     <div class="social-buttons">

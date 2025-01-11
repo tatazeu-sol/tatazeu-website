@@ -48,19 +48,43 @@
       font-size: 1.2rem;
     }
 
-    .address {
+    /* Address display */
+    .address-container {
+      display: flex;
+      align-items: center;
       font-family: monospace;
       font-size: 1rem;
       background: #f0f0f0;
       border: 1px solid #ccc;
       padding: 10px;
       width: 300px;
-      cursor: pointer;
       text-align: center;
       word-wrap: break-word;
     }
 
-    .address:focus {
+    .address {
+      margin-right: 10px;
+      padding-right: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 200px;
+    }
+
+    .copy-btn {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background: #0056b3;
+    }
+
+    .copy-btn:focus {
       outline: none;
     }
 
@@ -200,8 +224,9 @@
     <div class="logo-container">
       <img src="https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/logo%20website%20(1).webp" alt="Tata Zeu Logo">
     </div>
-    <div class="address" id="address" onclick="copyToClipboard()">
-      CA: 5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump
+    <div class="address-container">
+      <div class="address">5HHG5...</div>
+      <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
     </div>
   </header>
   <section>
@@ -225,13 +250,15 @@
   </footer>
 
   <script>
+    const fullAddress = "5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump";
+
     function copyToClipboard() {
-      var address = document.getElementById("address");
-      var range = document.createRange();
-      range.selectNode(address);
-      window.getSelection().removeAllRanges();
-      window.getSelection().addRange(range);
+      const textArea = document.createElement("textarea");
+      textArea.value = fullAddress;
+      document.body.appendChild(textArea);
+      textArea.select();
       document.execCommand('copy');
+      document.body.removeChild(textArea);
       alert("Address copied to clipboard!");
     }
   </script>

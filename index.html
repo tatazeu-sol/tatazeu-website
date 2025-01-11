@@ -49,24 +49,28 @@
     section {
       display: flex;
       justify-content: space-between;
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 1000px; /* Increase if you want more space */
+      position: absolute;
+      top: 30%;
+      width: 100%;
+      padding: 0 10%;
+    }
+
+    .left-content, .right-content {
       background: rgba(255, 255, 255, 0.9);
+      border: 2px solid red;
       border-radius: 8px;
+      width: 40%; /* Adjust the width to match the design */
+      padding: 20px;
+      text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .left-content {
-      flex: 1;
-      padding-right: 20px;
-      text-align: left;
+      margin-right: 5%; /* Add spacing between the two boxes */
     }
 
     .right-content {
-      flex: 1;
-      padding-left: 20px;
-      text-align: right;
+      margin-left: 5%;
     }
 
     .left-content p, .right-content p {
@@ -149,11 +153,12 @@
       section {
         flex-direction: column; /* Stack the content on top of each other */
         align-items: center;
+        top: 20%; /* Adjust for mobile view */
       }
 
       .left-content, .right-content {
-        text-align: center;
-        margin-bottom: 20px;
+        width: 80%; /* Reduce the size for mobile */
+        margin: 10px 0;
       }
     }
   </style>

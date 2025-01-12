@@ -117,17 +117,27 @@
       }
 
       section {
-        flex-direction: column;
+        flex-direction: column; /* Stack the content on top of each other */
         align-items: center;
-        height: auto;
-        padding: 20px;
+        top: 20%; /* Adjust for mobile view */
+        margin-top: -350px; /* Adjust this value to move the section down or up */
+        /* Use a negative value for margin-top to move it up */
       }
 
       .left-content, .right-content {
-        width: 90%; /* Full width for mobile */
+        width: 80%; /* Full width for mobile */
         margin: 10px 0;
       }
 
+      /* Adjust spacing between the two sections */
+      .left-content {
+        margin-bottom: 240px; /* Adds space between the two sections */
+      }
+
+      /* Adjust positioning for mobile */
+      .left-content, .right-content {
+        width: 90%; /* Ensure sections fit the screen width */
+      }
       .left-content p, .right-content p {
         font-size: 0.6rem; /* Smaller font size for mobile */
       }

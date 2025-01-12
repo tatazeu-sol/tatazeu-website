@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,6 +122,7 @@
         align-items: center;
         top: 20%; /* Adjust for mobile view */
         margin-top: -10px; /* Adjust this value to move the section down or up */
+        /* Use a negative value for margin-top to move it up */
       }
 
       .left-content, .right-content {
@@ -128,17 +130,30 @@
         margin: 10px 0;
       }
 
+      /* Adjust spacing between the two sections */
+      .left-content {
+        margin-bottom: 240px; /* Adds space between the two sections */
+      }
+
+      /* Adjust positioning for mobile */
+      .left-content, .right-content {
+        width: 90%; /* Ensure sections fit the screen width */
+      }
+      .left-content p, .right-content p {
+        font-size: 0.7rem; /* Smaller font size for mobile */
+      }
+
       footer .social-buttons a {
         width: 40px;
         height: 40px;
       }
       footer {
-        background: rgba(0, 0, 0, 0);
-        color: #000;
-        padding: 10px 0;
-        text-align: center;
-        font-size: 0.1rem; /* Smaller font size for mobile */
-      }
+      background: rgba(0, 0, 0, 0);
+      color: #000;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 0.7rem; /* Smaller font size for mobile */
+     }
     }
   </style>
 </head>
@@ -148,8 +163,8 @@
       <img src="logo website (2).webp" alt="Tata Zeu Logo">
     </div>
     <div class="buy-button">
-      <a href="https://pump.fun/coin/5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump" target="_blank" aria-label="Buy on Pumpfun">
-        <img src="buy.webp" alt="Buy Now">
+      <a href="https://pump.fun/coin/5HHG5rtygZpy6KykbMHewBEzbqq62aB22KQWmJYApump" target="_blank" aria-label="Buy Now">
+        <img src="buy button now.webp" alt="Buy Now">
       </a>
     </div>
   </header>

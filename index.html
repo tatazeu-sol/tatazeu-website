@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +17,7 @@
     body {
       display: flex;
       flex-direction: column;
-      justify-content: center; /* Center vertically */
-      align-items: center; /* Center horizontally */
+      justify-content: space-between;
       background: url('https://raw.githubusercontent.com/tatazeu-sol/tatazeu-website/main/Timeline%201%20(3).gif') center center fixed;
       background-repeat: no-repeat;
       background-size: 50%;
@@ -43,18 +43,16 @@
 
     section {
       display: flex;
-      justify-content: space-between; /* Keep sections side-by-side on desktop */
+      justify-content: center;
       align-items: center;
       padding: 50px 0;
       width: 100%;
       height: 100vh;
-      flex-wrap: wrap; /* Allow wrap on smaller screens */
     }
 
     .left-content, .right-content {
-      width: 45%; /* Make sections side-by-side */
+      width: 90%;
       text-align: center;
-      margin: 10px;
     }
 
     .left-content p, .right-content p {
@@ -102,7 +100,7 @@
       body {
         background-size: contain;
         background-repeat: no-repeat;
-        background-attachment: scroll;
+        background-attachment: fixed;
       }
 
       header {
@@ -134,12 +132,12 @@
 
       /* Adjust spacing between the two sections */
       .left-content {
-        margin-bottom: 140px; /* Adds space between the two sections */
+        margin-bottom: 240px; /* Adds space between the two sections */
       }
 
       /* Adjust positioning for mobile */
       .left-content, .right-content {
-        width: 100%; /* Ensure sections fit the screen width */
+        width: 90%; /* Ensure sections fit the screen width */
       }
       .left-content p, .right-content p {
         font-size: 0.7rem; /* Smaller font size for mobile */
@@ -149,50 +147,13 @@
         width: 40px;
         height: 40px;
       }
-
       footer {
-        background: rgba(0, 0, 0, 0);
-        color: #000;
-        padding: 10px 0;
-        text-align: center;
-        font-size: 0.7rem; /* Smaller font size for mobile */
-      }
-    }
-
-    /* Styles for devices with a width of 430px or smaller */
-    @media (max-width: 430px) {
-      body {
-        background-size: 70%; /* Adjust background size for smaller screens */
-      }
-
-      header .logo-container img {
-        max-height: 50px; /* Smaller logo */
-      }
-
-      header .buy-button img {
-        max-height: 25px; /* Smaller button */
-      }
-
-      section {
-        padding: 20px 0; /* Reduce padding */
-      }
-
-      .left-content, .right-content {
-        width: 100%; /* Full width for smaller screens */
-      }
-
-      .left-content p, .right-content p {
-        font-size: 0.6rem; /* Even smaller font size */
-      }
-
-      footer .social-buttons a {
-        width: 35px;
-        height: 35px; /* Smaller icons */
-      }
-
-      footer {
-        font-size: 0.6rem; /* Smaller footer text */
-      }
+      background: rgba(0, 0, 0, 0);
+      color: #000;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 0.7rem; /* Smaller font size for mobile */
+     }
     }
   </style>
 </head>
